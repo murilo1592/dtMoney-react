@@ -1,0 +1,63 @@
+Trabalhando com MirageJS - Simular API no Front-End
+
+yarn add miragejs
+
+arquivo app.tsx
+
+import { createServer } from "miragejs";
+
+createServer({
+  routes(){
+    this.namespace = 'api';
+  }
+})
+
+------------------------------------------------------------
+
+Instalando axios para requisições HTTP
+
+yarn add axios 
+
+import axios from 'axios'
+
+export const api = axios.create({
+    baseURL: "http://localhost:3000/api"
+})
+
+exemplo de requisição "get"
+
+const [transactions, setTransaction] = useState([])
+
+    useEffect(() => {
+        api.get("transactions")
+            .then(response => setTransaction(response.data))
+    }, []);
+
+    console.log(transactions)
+
+    ------------------------------------------------------------------
+
+    Modal com React
+
+    yarn add react-modal
+
+    
+    import Modal from 'react-modal'
+
+    <Modal
+                    isOpen={isNewTransactionModalOpen}
+                    onRequestClose={hendleCloseModalTransaction}
+                >
+
+                    <h2>Iniciar nova Transação</h2>
+
+                </Modal>
+
+------------------------------------------------------------------
+
+Repasse de propriedade para componentes
+
+
+
+
+
