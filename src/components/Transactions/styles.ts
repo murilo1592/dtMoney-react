@@ -29,14 +29,14 @@ export const Container = styled.div`
                 color: var(--text-title);
             }
 
-            &.deposit{
+            &.deposity{
                 color: var(--green);
-                font-weight: 500;
+                font-weight: 400;
             }
 
-            &.widhdraw{
+            &.withdraw{
                 color: var(--red);
-                font-weight: 500;
+                font-weight: 400;
             }
 
         }
